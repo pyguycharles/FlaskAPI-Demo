@@ -64,12 +64,12 @@ class Item(Resource):
      
 class ItemList(Resource):
     def get(self):
-        # connection = sqlite3.connect('data.db')
-        # cursor = connection.cursor()
-        # query = "SELECT * FROM items"
-        # result = cursor.execute(query)
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+        query = "SELECT * FROM items"
+        result = cursor.execute(query)
 
-        items = {'items': [item.json() for item in ItemModel.query.all()]}
+        # items = {'items': [item.json() for item in ItemModel.query.all()]}
         # items = {'items': list(map(lambda x: x.json(), ItemModel.query.all()))}
 
         # items = [dict(zip([key[0] for key in cursor.description], row)) for row in result]
