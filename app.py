@@ -21,6 +21,9 @@ api = Api(app)
 
 jwt = JWT(app, authenticate, identity)
 
+# cat ~/.ssh/id_rsa.pub | ssh user@45.55.176.68 "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"
+
+
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')

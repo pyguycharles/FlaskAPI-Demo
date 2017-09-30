@@ -12,3 +12,4 @@ def identity(payload):
     return UserModel.find_by_id(user_id)
 
 
+#/var/www/html/items-rest/venv/bin/uwsgi --master --emperor /var/www/html/items-rest/uwsgi.ini --die-on-term --uid ppm2501 --gid ppm2501 --logto /var/www/html/items-rest/log/emperor.log
